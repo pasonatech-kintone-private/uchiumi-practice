@@ -21,9 +21,8 @@ test("constの練習", () => {
 });
 
 test("わざと間違えを修正した", () => {
-    const booktitle = "本";
-    //booktitle = "書籍";
-    expect(booktitle).toBe("本");
-    //    expect(bookprice).toBe(3000);
-  });
-  
+  const booktitle = "本";
+  //booktitle = "書籍";
+  expect(booktitle).toBe("本");
+  //    expect(bookprice).toBe(3000);
+});
