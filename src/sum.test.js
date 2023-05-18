@@ -11,6 +11,7 @@ test("someとfilterの練習", () => {
   const array1 = [1, 3, 5, 7];
   const array2 = [2, 4, 6, 8];
 
+  //偶数のテスト
   expect(array.some((number) => number % 2 === 0)).toBe(true);
   expect(array1.some((number) => number % 2 === 0)).toBe(false);
   expect(array2.some((number) => number % 2 === 0)).toBe(true);
@@ -20,4 +21,15 @@ test("someとfilterの練習", () => {
   expect(array2.filter((number) => number % 2 === 0)).toStrictEqual([
     2, 4, 6, 8,
   ]);
+
+  //奇数のテスト
+  expect(array.some((number) => number % 2 === 1)).toBe(true);
+  expect(array1.some((number) => number % 2 === 1)).toBe(true);
+  expect(array2.some((number) => number % 2 === 1)).toBe(false);
+
+  expect(array.filter((number) => number % 2 === 1)).toStrictEqual([1, 3, 5]);
+  expect(array1.filter((number) => number % 2 === 1)).toStrictEqual([
+    1, 3, 5, 7,
+  ]);
+  expect(array2.filter((number) => number % 2 === 1)).toStrictEqual([]);
 });
