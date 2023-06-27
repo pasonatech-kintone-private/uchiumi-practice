@@ -33,3 +33,12 @@ test("someとfilterの練習", () => {
   ]);
   expect(array2.filter((number) => number % 2 === 1)).toStrictEqual([]);
 });
+
+test("indexOfの練習", () => {
+  const obj = { test: "中身" };
+  const array = [1, 2, 3, obj];
+
+  //テスト
+  expect(array.indexOf(obj)).toStrictEqual(3);
+  expect(array.indexOf({ test: "中身" })).toStrictEqual(-1);
+});
