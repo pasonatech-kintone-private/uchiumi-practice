@@ -42,3 +42,56 @@ test("indexOfの練習", () => {
   expect(array.indexOf(obj)).toStrictEqual(3);
   expect(array.indexOf({ test: "中身" })).toStrictEqual(-1);
 });
+
+test("findIndexの練習", () => {
+  const obj = { test: "中身" };
+  const array = [1, 2, 3, obj];
+
+  //テスト
+  expect(
+    array.findIndex((o) => {
+      return o.test === "中身";
+    })
+  ).toStrictEqual(3);
+  expect(
+    array.find((o) => {
+      return o.test === "中身";
+    })
+  ).toStrictEqual(obj);
+  expect(
+    array.find((o) => {
+      return false;
+    })
+  ).toStrictEqual(undefined);
+});
+
+test("sliceの練習", () => {
+  const obj = { test: "中身" };
+  const array = [1, 2, 3, obj];
+
+  //テスト
+  expect(array.slice(0, 3)).toStrictEqual([1, 2, 3]);
+  expect(array.slice(-1)).toStrictEqual([obj]);
+});
+
+test("InCludesの練習", () => {
+  const obj = { test: "中身" };
+  const array = [1, 2, 3, obj];
+
+  //テスト
+  expect(array.includes(obj)).toStrictEqual(true);
+  expect(array.includes("abc")).toStrictEqual(false);
+  expect(array.includes("中身")).toStrictEqual(false);
+});
+
+test("someの練習", () => {
+  const obj = { test: "中身" };
+  const array = [1, 2, 3, obj];
+
+  //テスト
+  expect(
+    array.some((o) => {
+      return o.test === "中身";
+    })
+  ).toStrictEqual(true);
+});
