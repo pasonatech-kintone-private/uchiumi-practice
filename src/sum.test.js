@@ -95,3 +95,22 @@ test("someの練習", () => {
     })
   ).toStrictEqual(true);
 });
+
+test("push,concat,flatの練習", () => {
+  const array = [];
+  const array1 = [];
+  array.push([1, 2, 3]);
+  array1.push(1, 2, 3);
+
+  //テスト
+  expect(array).toStrictEqual([[1, 2, 3]]);
+  //console.log(array);
+  //console.log(array1);
+  //const newArray1 = array1.concat(array);
+  //console.log(newArray1);
+  const newArray = array.concat([4, 5, 6]);
+  // console.log(newArray);
+  expect(array).toStrictEqual([[1, 2, 3]]);
+  expect(newArray).toStrictEqual([[1, 2, 3], 4, 5, 6]);
+  expect(newArray.flat()).toStrictEqual([1, 2, 3, 4, 5, 6]);
+});
