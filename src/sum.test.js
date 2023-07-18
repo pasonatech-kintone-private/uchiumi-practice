@@ -114,3 +114,18 @@ test("push,concat,flatの練習", () => {
   expect(newArray).toStrictEqual([[1, 2, 3], 4, 5, 6]);
   expect(newArray.flat()).toStrictEqual([1, 2, 3, 4, 5, 6]);
 });
+
+test("mapとメソッドチェーンの練習", () => {
+  const array = ["A", "B", "C"];
+  const obj = [{ value: "A" }, { value: "B" }, { value: "C" }];
+
+  expect(array.map((value) => ({ value }))).toStrictEqual(obj);
+  expect(array.map((asc) => asc.toLocaleLowerCase())).toStrictEqual([
+    "a",
+    "b",
+    "c",
+  ]);
+  expect(
+    array.map((asc) => asc.toLocaleLowerCase()).map((value) => ({ value }))
+  ).toStrictEqual([{ value: "a" }, { value: "b" }, { value: "c" }]);
+});
