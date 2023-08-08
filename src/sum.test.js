@@ -129,3 +129,21 @@ test("mapとメソッドチェーンの練習", () => {
     array.map((asc) => asc.toLocaleLowerCase()).map((value) => ({ value }))
   ).toStrictEqual([{ value: "a" }, { value: "b" }, { value: "c" }]);
 });
+
+test("正規表現(真偽値)の練習", () => {
+  const phoneNum = ["012-3456-7890", "000-0000-0000", "999-9999-9999"];
+  const notphoneNum = [
+    "a123-3456-7890",
+    "123-3456-7890a",
+    "a23-3456-7890",
+    "123-4567",
+  ];
+  const pattern = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
+  for (const test of phoneNum) {
+    expect(pattern.test(test)).toStrictEqual(true);
+  }
+
+  for (const test of notphoneNum) {
+    expect(pattern.test(test)).toStrictEqual(false);
+  }
+});
