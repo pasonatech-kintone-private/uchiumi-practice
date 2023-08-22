@@ -147,3 +147,16 @@ test("正規表現(真偽値)の練習", () => {
     expect(pattern.test(test)).toStrictEqual(false);
   }
 });
+test("replace,replaceallの練習", () => {
+  const phoneNum = "012-3456-7890";
+  const isNumPattern = /[0-9]/;
+  const isNumPatternGlobal = /[0-9]/g;
+  const pattern = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
+  expect(phoneNum.replace("0", "a")).toStrictEqual("a12-3456-7890");
+  expect(phoneNum.replaceAll("0", "a")).toStrictEqual("a12-3456-789a");
+  expect(phoneNum.replace(pattern, "a")).toStrictEqual("a");
+  expect(phoneNum.replace(isNumPattern, "a")).toStrictEqual("a12-3456-7890");
+  expect(phoneNum.replaceAll(isNumPatternGlobal, "a")).toStrictEqual(
+    "aaa-aaaa-aaaa"
+  );
+});
