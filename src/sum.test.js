@@ -160,3 +160,32 @@ test("replace,replaceallの練習", () => {
     "aaa-aaaa-aaaa"
   );
 });
+test("classの練習", () => {
+  class TennisRucket {
+    constructor(maker, color, weight) {
+      this.maker = maker;
+      this.color = color;
+      this.weight = weight;
+      this.numOfHit = 0;
+    }
+    hit() {
+      this.numOfHit++;
+    }
+  }
+  const yonexRucket = new TennisRucket("yonex", "blue", 120);
+  const baboraRucket = new TennisRucket("babora", "red", 100);
+  expect(yonexRucket.maker).toStrictEqual("yonex");
+  expect(yonexRucket.color).toStrictEqual("blue");
+  expect(yonexRucket.weight).toStrictEqual(120);
+  expect(baboraRucket.maker).toStrictEqual("babora");
+  expect(baboraRucket.color).toStrictEqual("red");
+  expect(baboraRucket.weight).toStrictEqual(100);
+  const yonexRucket2 = new TennisRucket("yonex", "blue", 120);
+  expect(yonexRucket === yonexRucket2).toStrictEqual(false);
+  yonexRucket.hit();
+  yonexRucket.hit();
+  yonexRucket.hit();
+  expect(baboraRucket.numOfHit).toStrictEqual(0);
+  expect(yonexRucket.numOfHit).toStrictEqual(3);
+  expect(yonexRucket2.numOfHit).toStrictEqual(0);
+});
