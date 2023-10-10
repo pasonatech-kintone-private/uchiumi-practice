@@ -189,3 +189,9 @@ test("classの練習", () => {
   expect(yonexRucket.numOfHit).toStrictEqual(3);
   expect(yonexRucket2.numOfHit).toStrictEqual(0);
 });
+
+//test("非同期処理の練習", () => {
+//  return new Promise(()=>{
+//    expect(0).toStrictEqual(3);
+//  });
+//});
