@@ -1,4 +1,4 @@
-console.log("hello world");
+/*console.log("hello world");
 //console.log("test");
 //const testtitle = "テストタイトル";
 let testtitle;
@@ -16,3 +16,14 @@ var x;
 console.log(x);
 var x = "test1";
 console.log(x);
+*/
+const total = 42 + 42; // =>84
+console.log(total);
+
+const value = "値";
+//console.log(x); // => ReferenceError: x is not defined
+console.log(value); // => 値　xをvalueに変更した
+
+const num = 1;
+//console.log(num+num1); // => ReferenceError: num1 is not defined
+console.log(num + num); // => 2
