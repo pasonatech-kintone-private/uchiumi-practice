@@ -21,7 +21,8 @@ const total = 42 + 42; // =>84
 console.log(total);
 
 const value = "値";
-console.log(value); // => ReferenceError: x is not defined
+//console.log(x); // => ReferenceError: x is not defined
+console.log(value); // => 値　xをvalueに変更した
 
 const num = 1;
 //console.log(num+num1); // => ReferenceError: num1 is not defined
