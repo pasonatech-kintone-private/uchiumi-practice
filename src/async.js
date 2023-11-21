@@ -53,8 +53,8 @@ response3.then((resp)=> {
 response4.then((resp)=> {
    resp.ok
    console.log("ok4:" + resp.ok);
-}
-).then(
+})
+.then(
 response5.then((resp)=> {
  resp.ok
  console.log("ok5" + resp.ok);
@@ -65,7 +65,7 @@ response6.then((resp)=> {
  resp.ok
  console.log("ok6:" + resp.ok);
 }
-))
+));
 
 
 
