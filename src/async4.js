@@ -1,3 +1,4 @@
+//1.並列実行
 const response1 = fetch("http://google.com/");
 const response2 = fetch("http://www.yahoo.co.jp/");
 const response3 = fetch("https://kintone.cybozu.co.jp/");
