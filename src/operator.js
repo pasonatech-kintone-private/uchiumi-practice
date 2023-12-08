@@ -1,0 +1,23 @@
+let num = 1;
+let num2 = 1;
+let num1 = 1;
+//num++;
+console.log(num++);
+console.log(++num2);
+console.log(num, num2);
+
+const str1 = "ABC";
+const str2 = "DEF" + "123";
+console.log(str1 + str2);
+console.log(str1 - str2);
+console.log(2 * 6);
+console.log(2 * 0.6);
+console.log(12 / 0.6);
+console.log(2 / 0);
+console.log(13 % 2);
+console.log(13 % 0);
+console.log(3 ** 4);
+console.log(3 * 3 * 3 * 3);
+console.log(Math.pow(3, 4));
+console.log(Math.pow(4, 3));
+console.log((num1 += 10));
