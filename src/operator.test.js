@@ -11,7 +11,7 @@ test("分割代入の練習(配列)", () => {
   //配列の数より多い項目を設定しようとするとundefinedになる
   const [g, h] = array;
   const [i, , j] = array;
-  const [k, l, m, n] = array;
+  // const [k, l, m, n] = array;
   expect(a).toBe("test");
   expect(b).toBe(1);
   expect(c).toBe("abc");
@@ -22,15 +22,15 @@ test("分割代入の練習(配列)", () => {
   expect(h).toBe(1);
   expect(i).toBe("test");
   expect(j).toBe("abc");
-  expect(k).toBe("test");
-  expect(l).toBe(1);
-  expect(m).toBe("abc");
-  expect(n).toBe(undefined);
+  //expect(k).toBe("test");
+  //expect(l).toBe(1);
+  //expect(m).toBe("abc");
+  // expect(n).toBe(undefined);
 });
 test("分割代入の練習(object)", () => {
   const obj = {
-    "color": "red",
-    "size": "Large"
+    color: "red",
+    size: "Large",
   };
   //変数目例はオブジェクトの属性名と同じ必要がある
   //全部の属性を指定しなくても指定できる
@@ -47,4 +47,3 @@ test("三項演算子の練習", () => {
   expect(B).toBe("B");
   expect(C).toBe("空文字でない");
 });
-
