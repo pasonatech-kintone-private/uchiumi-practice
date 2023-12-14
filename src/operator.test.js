@@ -7,12 +7,25 @@ test("分割代入の練習(配列)", () => {
   const array = ["test", 1, "abc"];
   const [a, b, c] = array;
   const [d, e, f] = array;
+  //全部の項目を配列指定しなくてもいい
+  //配列の数より多い項目を設定しようとするとundefinedになる
+  const [g, h] = array;
+  const [i,,j] = array;
+  const [k,l,m,n] = array;
   expect(a).toBe("test");
   expect(b).toBe(1);
   expect(c).toBe("abc");
   expect(d).toBe("test");
   expect(e).toBe(1);
   expect(f).toBe("abc");
+  expect(g).toBe("test");
+  expect(h).toBe(1);
+  expect(i).toBe("test");
+  expect(j).toBe("abc");
+  expect(k).toBe("test");
+  expect(l).toBe(1);
+  expect(m).toBe("abc");
+  expect(n).toBe(undefined);
 });
 test("分割代入の練習(object)", () => {
   const obj = {
