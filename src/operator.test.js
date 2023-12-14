@@ -10,8 +10,8 @@ test("分割代入の練習(配列)", () => {
   //全部の項目を配列指定しなくてもいい
   //配列の数より多い項目を設定しようとするとundefinedになる
   const [g, h] = array;
-  const [i,,j] = array;
-  const [k,l,m,n] = array;
+  const [i, , j] = array;
+  const [k, l, m, n] = array;
   expect(a).toBe("test");
   expect(b).toBe(1);
   expect(c).toBe("abc");
