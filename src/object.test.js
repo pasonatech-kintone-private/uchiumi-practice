@@ -18,3 +18,15 @@ test("配列の練習", () => {
   expect(testArray[3]).toBe(-100);
   expect(testArray[4]).toBe(null);
 });
+test("methodの練習", () => {
+  const objTest = {
+    method1: function (num) {
+      return num * 100;
+    },
+    method2: (num1, num2) => {
+      return (num1 + num2) * 200;
+    },
+  };
+  expect(objTest.method1(1)).toBe(100);
+  expect(objTest.method2(2, 3)).toBe(1000);
+});
