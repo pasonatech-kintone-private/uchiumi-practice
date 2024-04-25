@@ -30,3 +30,50 @@ test("methodの練習", () => {
   expect(objTest.method1(1)).toBe(100);
   expect(objTest.method2(2, 3)).toBe(1000);
 });
+test("1_オブジェクトを宣言して中身を確認", () => {
+  const colors = {
+    red: "赤",
+    blue: "青",
+    black: "黒",
+  };
+  expect(colors.red).toBe("赤");
+  expect(colors.blue).toBe("青");
+  expect(colors.black).toBe("黒");
+});
+test("2_特殊なキー名を利用したオブジェクトの宣言と中身の確認", () => {
+  const obj = {
+    key: "key",
+    123: 123,
+    "my-prop": "my-prop",
+  };
+  expect(obj.key).toBe("key");
+  expect(obj[123]).toBe(123);
+  expect(obj["my-prop"]).toBe("my-prop");
+});
+test("オブジェクト宣言省略記法の練習", () => {
+  const red = "赤";
+  const blue = "青";
+  const black = "黒";
+  const colors = {
+    red,
+    blue,
+    black,
+  };
+  expect(colors.red).toBe("赤");
+  expect(colors.blue).toBe("青");
+  expect(colors.black).toBe("黒");
+});
+test("3_分割代入の練習", () => {
+  const colors = {
+    red: "赤",
+    blue: "青",
+    black: "黒",
+  };
+  const { red, blue, black } = colors;
+  expect(red).toBe("赤");
+  expect(blue).toBe("青");
+  expect(black).toBe("黒");
+  expect(red).toBe(colors.red);
+  expect(blue).toBe(colors.blue);
+  expect(black).toBe(colors.black);
+});
