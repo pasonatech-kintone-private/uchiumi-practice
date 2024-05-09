@@ -30,3 +30,40 @@ test("methodの練習", () => {
   expect(objTest.method1(1)).toBe(100);
   expect(objTest.method2(2, 3)).toBe(1000);
 });
+
+test("オブジェクトの列挙の練習", () => {
+  const objTest = {
+    key1: "test1",
+    key2: "test2",
+    key3: "test3",
+  };
+  expect(Object.keys(objTest)).toStrictEqual(["key1", "key2", "key3"]);
+  expect(Object.values(objTest)).toStrictEqual(["test1", "test2", "test3"]);
+  expect(Object.entries(objTest)).toStrictEqual([
+    ["key1", "test1"],
+    ["key2", "test2"],
+    ["key3", "test3"],
+  ]);
+});
+test("オブジェクトアサインの練習", () => {
+  const obj1 = {
+    key1: "test1",
+  };
+  const obj2 = {
+    key2: "test2",
+  };
+  const obj3 = {
+    key3: "test3",
+  };
+
+  expect(Object.assign({}, obj1, obj2, obj3)).toStrictEqual({
+    key1: "test1",
+    key2: "test2",
+    key3: "test3",
+  });
+  expect({ ...obj1, ...obj2, ...obj3 }).toStrictEqual({
+    key1: "test1",
+    key2: "test2",
+    key3: "test3",
+  });
+});
