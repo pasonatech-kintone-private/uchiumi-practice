@@ -20,8 +20,10 @@ test("if", () => {
   function greater(x) {
     if (x > 10) {
       return true;
+    } else {
+      return false;
     }
   }
   expect(greater(11)).toBe(true);
-  expect(greater(8)).toBe(undefined);
+  expect(greater(8)).toBe(false);
 });
